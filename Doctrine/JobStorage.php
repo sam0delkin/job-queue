@@ -209,10 +209,6 @@ class JobStorage
      */
     private function getEntityManager()
     {
-        if (!$this->em) {
-            $this->em = $this->doctrine->getManagerForClass($this->entityClass);
-        }
-
-        return $this->em;
+        return $this->doctrine->getManagerForClass($this->entityClass);
     }
 }
